@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[T2A,T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\begin{document}
+
+
+
+\section*{\foreignlanguage{russian}{Домашее задание 2 (к 25/02/2016). Модель Word2vec}}
+
+\foreignlanguage{russian}{Составьте достаточно большую коллекцию текстов на любом языке или используйте тексты отсюда}:
+\url{https://www.kaggle.com/c/word2vec-nlp-tutorial/data}.
+
+\begin{enumerate}
+    \item \foreignlanguage{russian}{\textbf{[1 балла]} Обучите модель word2vec. Оцените время обучения модели, используя модуль time.}
+    
+    \foreignlanguage{russian}{Есть два варианта обучения модели: по отзывам целиком и с учетам границ предложений. В принципе, погрешностью, которая возникает в первом случае можно пренебречь, но если вы хотите учитывать границы предложений, то можно использовать \texttt{sent\_tokenize} из \texttt{nltk.tokenize}.}
+    
+    \item \foreignlanguage{russian}{\textbf{[2 балла]} Приведите 5-10 примеров использования \texttt{.most\_similar} для определения близких слов. Корректно ли они найдены? Являются ли синонимами исходного слова?}
+    \item \foreignlanguage{russian}{\textbf{[2 балла]} Приведите 5-10 примеров использования \texttt{.most\_similar}  для определения ассоциаций (А к Б, как В к?). Корректно ли найдены ассоциации?}
+    \item \foreignlanguage{russian}{\textbf{[2 балла]} Приведите 5-10 примеров использования \texttt{.doesnt\_match} для определения лишнего слова. Корректно ли найдены лишние слова?}
+    \item \foreignlanguage{russian}{\textbf{[3 балла]} Попробуйте найти такие пары и тройки слов, для которых }
+    \begin{itemize}
+    \item \foreignlanguage{russian}{\textbf{не} выполняются свойства коммутативности и транзитивности относительно операции определения близких слов.} 
+    \item \foreignlanguage{russian}{выполняются свойства коммутативности и транзитивности относительно операции определения близких слов.} 
+	
+    \end{itemize}
+
+\foreignlanguage{russian}{Обозначим отношение ``входить в топ-3 по \texttt{.most\_similar}''  символом $\circ$.}
+
+\foreignlanguage{russian}{\textbf{Коммутативность}} $x \circ y \implies y \circ x$
+
+
+\foreignlanguage{russian}{\textbf{Транзитивность} $x\circ y, y \circ z \implies x \circ z$  }
+
+\end{enumerate}
+
+\end{document}
